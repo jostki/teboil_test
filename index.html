@@ -292,7 +292,7 @@
 	 <button class="nav_btn" style="    margin-left: -20px;"><img class="nav_img" style="    width: 45px;
     margin-left: -5px;" width="100px" src="img/nav_1.jpg"></button>
 	 	 <button class="nav_btn"><img class="nav_img" style="width: 55px;" width="100px" src="img/nav_2.jpg"></button>
-  <button class="nav_center"><img class="nav_img" style="    width: 110px;
+  <button onclick="popupToggle()" class="nav_center"><img class="nav_img" style="    width: 110px;
     margin-left: 0px;
     margin-right: 3px;"  src="img/nav_center.jpg"></button>
   	 <button class="nav_btn"><img class="nav_img" style="    width: 41px;" width="100px" src="img/nav_3.jpg"></button>
@@ -303,10 +303,77 @@
 
 
 
-<script type="text/javascript">
-	window.open('popup.html', 'popup',
-    'location=no,toolbar=no,menubar=no,scrollbars=no,status=no');
-</script>
+<div id="hideMe" class="mask"> 
+         <div id="popup">
+         	<div class="teb">
+	<img class="logo_teboil" src="img/logo.svg"></div>
+  <div class="content">
+   
+   <div class="main_qr">
+   	<div class="blocks_qr" >
+   		<div class="box_qr" style="    width: 166px;"> 
+   			<span class="user-status-card__level-info" style="font-size: 12px;
+    font-weight: 600;">Ваш уровень</span>
+   			<h1 class="user-status-card__level" style="    font-size: 23px;
+    font-weight: 800;
+    padding-top: 9px;">Рубин</h1>
+   		</div>
+   		<div class="box_qr" style="    margin-left: 12px; width: 136px;">
+   			<span class="user-status-card__level-info"style="font-size: 12px;
+    font-weight: 600;">Баллы</span>
+   			<h1 class="user-status-card__level" style="    font-size: 23px;
+    font-weight: 800;
+    padding-top: 9px;">45</h1>
+   		</div>
+   	</div>
+<div class="box_main_qr">
+    <img class="qr_code" style="     max-width: 100%; " src="https://api.qrserver.com/v1/create-qr-code/?size=420x420&amp;data=[[CARD]]" id="card_qr">
+     </div>
+     <div class="text_qr">
+	<p class="p_text">Отсканируйте QR-код на кассе <br> для начисления или списания баллов</p>
+</div>
+     <div class="addblock">
+   
 
+
+
+    	<span style="        color: white;
+    display: flex;
+    /* position: absolute; */
+    padding-left: 26px;
+       
+    font-weight: 600;
+   
+    padding-top: 13%;
+    
+
+    font-size: 16px;
+    /* flex-direction: row;
+">Двойная выгода</span>
+     </div>
+     </div>
+  </div>
+
+    <a class="close" onclick="popupToggle();" ><i class="fa fa-times" aria-hidden="true" style="
+    color: white;
+    /* padding: 4px; */
+    padding-left: 6.5px;
+    font-size: 16px;
+    padding-top: 4px;
+"></i><a>
+</div>
+</div>
+
+
+<script>
+function popupToggle(){
+    const  popup = document.getElementById('popup');
+    popup.classList.toggle('active')
+}
+</script>    
+      
+  
+ 
+       
 </body>
 </html>
